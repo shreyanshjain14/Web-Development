@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <!-- Local Storage is a temporary stoarge we use to save some values. Is is a browser oriented storage, once browser window is closed it will vanish itself -->
+    <script>
+        if(sessionStorage.hits)
+        {
+            sessionStorage.hits = Number(sessionStorage.hits) + 1;
+        }
+        else
+        {
+            sessionStorage.hits = 1;
+        }
+        document.write("Total Hits", sessionStorage.hits);
+    </script>
+   
+</body>
+</html>

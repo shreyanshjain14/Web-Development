@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <div style="margin-top:230px;background-color: pink;border: 3px solid;width: 35%;margin-left:550px; height: 500px;text-align:center;">
+    <h1>Score Meter</h1>
+    <h4>(enter the number of singles,doubles,triples,fours and Sixes in Comma Seperated formated)</h4>
+    <h2>enter the score details:</h2><input style=" text-align:center;" type ="text" placeholder="enter the score" id="score"/>
+    
+
+    <button style="margin:auto;" onclick="Scoremeter()">Get score</button>
+    <h2>Total Score</h2>
+    <h2 id="p"></h2>
+    
+ </div>
+
+<script>
+  function Scoremeter() { 
+            var input = document.getElementById('score').value; 
+            input=input.split(",");
+            var b=input.map(i=>Number(i));
+            console.log(b);
+
+            var c=[];
+            for(var i=0;i<=3;i++)
+            {
+              c[i]=b[i]*(i+1);
+            }
+            c.push(b[4]*6);
+            console.log(c);
+            var s=0;
+            for(var i=0;i<=4;i++)
+            {
+              s=s+c[i];
+            }
+            document.getElementById('p').innerHTML=s; 
+  }
+           
+
+
+</script>
+
+</body>
+</html>

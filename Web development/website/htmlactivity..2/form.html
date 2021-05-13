@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+  
+    <title>Form</title>
+    <style>
+        td {
+            color: #708090;
+            font-style: italic;
+        }
+
+        table {
+            border-spacing: 0 15px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="../website.html">Home</a></li>
+                <li><a href="../html activity1/1.html">IPL Dashboard</a></li>
+                <li><a href="../javascript/Score meter(activity1).html">Scoremeter</a></li>
+                <li><a href="../javascript/wincalculation(activity2).html">win Predictor</a></li>
+            </ul>
+            </div>
+        </nav>
+        </nav>
+        <br>
+    <div style="margin:auto;background-color: rgba(38, 106, 195, 0.863);border: 3px solid;width: 35%;">
+        <h3 style=" text-align:center; color: aliceblue;">Player Details</h3>
+    </div>
+    <br>
+
+
+
+    <div style="margin:auto;width: 35%; height: 500px;border: 3px solid;  background-color:#87CEEB;">
+
+        <form>
+            <table style="margin-left: auto; margin-right:auto;">
+                <tr>
+                    <td>Name<span style="color: red;">*</span> </td>
+                    <td><input type="text" name="name" placeholder="Enter your name" /></td>
+                </tr>
+                <br>
+                <tr>
+                    <td>DOB<span style="color: red;">*</span> </td>
+                    <td><input type="date" name="dob" style=" width: 78%;" /></td>
+                </tr>
+                <tr>
+                    <td>Age<span style="color: red;">*</span> </td>
+                    <td><input type="number" name="age" placeholder="Enter your age" /></td>
+                </tr>
+                <tr>
+                    <td>Email<span style="color: red;">*</span> </td>
+                    <td><input type="email" name="email" placeholder="abc12@xyz.com" /></td>
+                </tr>
+                <tr>
+                    <td>Country<span style="color: red;">*</span> </td>
+                    <td> <select id="country" name="country" style="width: 81%;">
+                            <option>
+                                India
+                            </option>
+                            <option>
+                                Australia
+                            </option>
+                            <option>
+                                New Zealand
+                            </option>
+                            <option>
+                                America
+                            </option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Skills<span style="color: red;">*</span> </td>
+                    <td><input type="checkbox" name="skills" />Batting <input type="checkbox" name="skills" />Bowling
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td>Batting Style </td>
+                    <td><input type="radio" name="bat_style" /> Right Handed <input type="radio" name="bat_style" />Left
+                        Handed</td>
+
+                </tr>
+                <tr>
+                    <td>Bowling Style </td>
+                    <td><input type="radio" name="bowl_style" /> Right Handed <input type="radio"
+                            name="bowl_style" />Left Handed</td>
+
+                </tr>
+                <tr>
+                    <td>Match<span style="color: red;">*</span> </td>
+                    <td><input type="number" name="match" placeholder="Total matches played" /></td>
+                </tr>
+                <tr>
+                    <td>Runs<span style="color: red;">*</span> </td>
+                    <td><input type="number" name="runs" placeholder="Total runs scored" /></td>
+                </tr>
+                <tr>
+                    <td>Wickets<span style="color: red;">*</span> </td>
+                    <td><input type="number" name="txtPwd" placeholder="Wickets" /></td>
+                </tr>
+                <tr>
+                    <td>Achievements </td>
+                    <td><textarea name="txtarea" placeholder="Your achievements in cricket"></textarea></td>
+                </tr>
+            </table>
+
+    </div>
+    <div
+        style="margin:auto;background-color: rgba(38, 106, 195, 0.863);border: 3px solid;width: 35%; height: 80px;margin-top: 20px; ">
+        <input type="submit" style="margin-top: 25px; text-align:center; margin-left: 260px;">
+        <input type="reset">
+    </div>
+    </form>
+    <center><a href= "../website.html" ><h4>Go back to portfolio</h4></a></center>
+
+
+
+</body>
+
+</html>

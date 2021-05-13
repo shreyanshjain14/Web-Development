@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../website.html">Home</a></li>
+        <li><a href="../html activity1/1.html">IPL Dashboard</a></li>
+        <li> <a href="../htmlactivity..2/form.html">Registration form</a></li>
+        <li><a href="../javascript/wincalculation(activity2).html">win Predictor</a></li>
+      </ul>
+    </div>
+  </nav>>
+</nav>
+
+  <div style="margin-top:230px;background-color: pink;border: 3px solid;width: 35%;margin-left:550px; height: 500px;text-align:center;">
+    <h1>Score Meter</h1>
+    <h4>(enter the number of singles,doubles,triples,fours and Sixes in Comma Seperated formated)</h4>
+    <h2>enter the score details:</h2><input style=" text-align:center;" type ="text" placeholder="enter the score" id="score"/>
+    
+
+    <button style="margin:auto;" onclick="Scoremeter()">Get score</button>
+    <h2>Total Score</h2>
+    <h2 id="p"></h2>
+    
+ </div>
+
+<script>
+  function Scoremeter() { 
+            var input = document.getElementById('score').value; 
+            input=input.split(",");
+            var b=input.map(i=>Number(i));
+            console.log(b);
+
+            var c=[];
+            for(var i=0;i<=3;i++)
+            {
+              c[i]=b[i]*(i+1);
+            }
+            c.push(b[4]*6);
+            console.log(c);
+            var s=0;
+            for(var i=0;i<=4;i++)
+            {
+              s=s+c[i];
+            }
+            document.getElementById('p').innerHTML=s; 
+  }
+  
+           
+
+
+</script>
+<center><a href= "../website.html" ><h4>Go back to portfolio</h4></a></center>
+
+
+</body>
+</html>

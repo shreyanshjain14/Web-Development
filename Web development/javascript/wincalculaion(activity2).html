@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>win</title>
+  <style>
+    table {
+      border-spacing: 0 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div
+    style="margin-top:230px;background-color:rgb(231, 231, 135);width: 35%;border-collapse:collapse;margin-left:550px; height: 500px;">
+
+    <h1>Match Summary</h1>
+    <form onsubmit="return false;">
+      <table>
+        <tr>
+          <td>Team A<span style="color: red;">*</span> </td>
+          <td><input type="text" id="teamA" placeholder="Team A" pattern='[a-zA-Z\s]+' required /></td>
+        </tr>
+        <tr>
+          <td>Team B <span style="color: red;">*</span> </td>
+          <td><input type="text" id="teamB" placeholder="Team B" pattern='[a-zA-Z\s]+' required /></td>
+        </tr>
+        <tr>
+          <td>Date<span style="color: red;">*</span> </td>
+          <td><input type="date" name="date" style=" width: 78%;" required /></td>
+        </tr>
+        <tr>
+          <td>Time<span style="color: red;">*</span> </td>
+          <td><input type="time" name="time" placeholder="Time" required /></td>
+        </tr>
+
+        <tr>
+          <td>Team A Score<span style="color: red;">*</span> </td>
+          <td><input type="text" id="scoreA" placeholder=" Team A Score" required /></td>
+        </tr>
+        <tr>
+          <td>Team B Score<span style="color: red;">*</span> </td>
+          <td><input type="text" id="scoreB" placeholder="Team B Score" required /></td>
+        </tr>
+
+        <tr>
+          <td><button style="margin:auto;" onclick="win()">save</button></td>
+        </tr>
+
+        <tr>
+          <td>
+            <h2>Winning team:
+          </td>
+          <td>
+            <h2 id="save"></h2>
+          </td>
+        </tr>
+      </table>
+    </form>
+
+  </div>
+  <script>
+    function win() {
+      var a = document.getElementById('scoreA').value;
+      var b = document.getElementById('scoreB').value;
+      a = a.substring(0, a.lastIndexOf('/'))
+      b = b.substring(0, b.lastIndexOf('/'))
+      var t1 = document.getElementById('teamA').value;
+      var t2 = document.getElementById('teamB').value;
+      if (a > b)
+        document.getElementById('save').innerHTML = t1;
+      else
+        document.getElementById('save').innerHTML = t2;
+
+    }
+
+
+
+  </script>
+
+</body>
+
+</html>
